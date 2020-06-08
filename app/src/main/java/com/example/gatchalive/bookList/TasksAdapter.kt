@@ -20,6 +20,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.api.load
 import com.example.gatchalive.MainViewModel
 import com.example.gatchalive.R
 import com.example.gatchalive.databinding.ListItemBookBinding

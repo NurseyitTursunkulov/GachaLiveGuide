@@ -24,7 +24,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         MutableLiveData<Event<Boolean>>()
     val showAdvertEvent: LiveData<Event<Boolean>> = _showAdvertEvent
 
-    var showAdvertState = true
+    var showAdvertState = false
 
     private val _navigateToDetailEvent = MutableLiveData<Event<Book>>()
     val navigateToDetailEvent: LiveData<Event<Book>> = _navigateToDetailEvent
@@ -100,6 +100,56 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             Book(
                 title = getString(R.string.book_7_title),
                 body = getString(R.string.book_7_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_8_title),
+                body = getString(R.string.book_8_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_9_title),
+                body = getString(R.string.book_9_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_10_title),
+                body = getString(R.string.book_10_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_11_title),
+                body = getString(R.string.book_11_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_12_title),
+                body = getString(R.string.book_12_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_13_title),
+                body = getString(R.string.book_13_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_14_title),
+                body = getString(R.string.book_14_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_15_title),
+                body = getString(R.string.book_15_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_16_title),
+                body = getString(R.string.book_16_body),
+                imageId = R.drawable.image2
+            ),
+            Book(
+                title = getString(R.string.book_17_title),
+                body = getString(R.string.book_17_body),
                 imageId = R.drawable.image2
             )
         )
