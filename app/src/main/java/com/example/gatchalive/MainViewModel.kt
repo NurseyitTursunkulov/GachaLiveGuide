@@ -37,7 +37,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     init {
         viewModelScope.launch {
-            delay(2000)
+            delay(3000)
             _splashState.postValue(
                 Event(
                     SplashState.MainActivity()
@@ -65,92 +65,92 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             Book(
                 title = getString(R.string.book1title),
                 body = getString(R.string.book1body),
-                imageId = R.drawable.foot1
+                imageId = R.drawable.gata0
             ),
             Book(
                 title = getString(R.string.book_1_title),
                 body = getString(R.string.book_1_body),
-                imageId = R.drawable.foot2
+                imageId = R.drawable.gata1
             ),
             Book(
                 title = getString(R.string.book_2_title),
                 body = getString(R.string.book_2_body),
-                imageId = R.drawable.image3
+                imageId = R.drawable.gata2
             ),
             Book(
                 title = getString(R.string.book_3_title),
                 body = getString(R.string.book_3_body),
-                imageId = R.drawable.image5
+                imageId = R.drawable.gata3
             ),
             Book(
                 title = getString(R.string.book_4_title),
                 body = getString(R.string.book_4_body),
-                imageId = R.drawable.image4
+                imageId = R.drawable.gata4
             ),
             Book(
                 title = getString(R.string.book_5_title),
                 body = getString(R.string.book_5_body),
-                imageId = R.drawable.image7
+                imageId = R.drawable.gata5
             ),
             Book(
                 title = getString(R.string.book_6_title),
                 body = getString(R.string.book_6_body),
-                imageId = R.drawable.image6
+                imageId = R.drawable.gata6
             ),
             Book(
                 title = getString(R.string.book_7_title),
                 body = getString(R.string.book_7_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata7
             ),
             Book(
                 title = getString(R.string.book_8_title),
                 body = getString(R.string.book_8_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata8
             ),
             Book(
                 title = getString(R.string.book_9_title),
                 body = getString(R.string.book_9_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata9
             ),
             Book(
                 title = getString(R.string.book_10_title),
                 body = getString(R.string.book_10_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata10
             ),
             Book(
                 title = getString(R.string.book_11_title),
                 body = getString(R.string.book_11_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata11
             ),
             Book(
                 title = getString(R.string.book_12_title),
                 body = getString(R.string.book_12_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata12
             ),
             Book(
                 title = getString(R.string.book_13_title),
                 body = getString(R.string.book_13_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata13
             ),
             Book(
                 title = getString(R.string.book_14_title),
                 body = getString(R.string.book_14_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata14
             ),
             Book(
                 title = getString(R.string.book_15_title),
                 body = getString(R.string.book_15_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata15
             ),
             Book(
                 title = getString(R.string.book_16_title),
                 body = getString(R.string.book_16_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata16
             ),
             Book(
                 title = getString(R.string.book_17_title),
                 body = getString(R.string.book_17_body),
-                imageId = R.drawable.image2
+                imageId = R.drawable.gata17
             )
         )
     }

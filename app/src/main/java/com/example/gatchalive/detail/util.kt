@@ -36,7 +36,7 @@ fun Fragment.showRateMeDialog() {
         RateMeDialog.Builder(requireActivity().packageName, "")
             .setHeaderBackgroundColor(resources.getColor(R.color.colorPrimary))
             .setBodyBackgroundColor(resources.getColor(R.color.dialog_body))
-            .showAppIcon(R.mipmap.ic_logo_foreground)
+            .showAppIcon(R.mipmap.logo)
             .enableFeedbackByEmail("")
             .setRateButtonBackgroundColor(resources.getColor(R.color.dialog_button))
             .build()
@@ -55,17 +55,17 @@ fun showInterstitialAdvertSafe(interstitialAd: InterstitialAd) {
 fun ScreenSlidePageFragment.getRandomImage(): Int {
     val images =
         intArrayOf(
-            R.drawable.foot5 //ok
-            , R.drawable.image1// ok
-            , R.drawable.image2, //ok
-            R.drawable.foot12, //ok
-            R.drawable.foot13,// ok
-            R.drawable.foot15,// ok
-            R.drawable.foot16,// ok
-            R.drawable.foot18,
-            R.drawable.foot20,
-            R.drawable.foot21,
-            R.drawable.foot19
+            R.drawable.gata0 //ok
+            , R.drawable.gata1// ok
+            , R.drawable.gata2, //ok
+            R.drawable.gata3, //ok
+            R.drawable.gata4,// ok
+            R.drawable.gata5,// ok
+            R.drawable.gata6,// ok
+            R.drawable.gata7,
+            R.drawable.gata8,
+            R.drawable.gata9,
+            R.drawable.gata10
         )
     val rand = Random()
     return images[rand.nextInt(images.size)]
