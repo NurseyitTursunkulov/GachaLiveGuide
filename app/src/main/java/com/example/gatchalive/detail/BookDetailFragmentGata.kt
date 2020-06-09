@@ -9,25 +9,25 @@ import androidx.fragment.app.FragmentActivity
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.gatchalive.MainViewModel
+import com.example.gatchalive.MainViewModelGata
 import com.example.gatchalive.R
-import com.example.gatchalive.util.removeFullScreen
-import kotlinx.android.synthetic.main.activity_screen_slide.*
-import kotlinx.android.synthetic.main.fragment_book_detail.*
+import com.example.gatchalive.util.removeFullScreenGata
+import kotlinx.android.synthetic.main.activity_screen_slidegata.*
+import kotlinx.android.synthetic.main.fragment_book_detailgata.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class BookDetailFragment : Fragment(R.layout.activity_screen_slide) {
+class BookDetailFragmentGata : Fragment(R.layout.activity_screen_slidegata) {
 
-    val viewModel: MainViewModel by sharedViewModel()
+    val viewModelGata: MainViewModelGata by sharedViewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        removeFullScreen()
+        removeFullScreenGata()
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
         (activity as AppCompatActivity).supportActionBar?.show()
-        pager.adapter = ScreenSlidePagerAdapter(requireActivity())
-        initPendingIndicatorView()
+        pager.adapter = ScreenSlidePagerAdapterGata(requireActivity())
+        initPendingIndicatorViewGata()
 
 
         pager.registerOnPageChangeCallback(
@@ -48,28 +48,30 @@ class BookDetailFragment : Fragment(R.layout.activity_screen_slide) {
             if (pager.currentItem == 0) {
                 // If the user is currently looking at the first step, allow the system to handle the
                 // Back button. This calls finish() on this activity and pops the back stack.
-                this@BookDetailFragment.findNavController().navigateUp()
+                this@BookDetailFragmentGata.findNavController().navigateUp()
             } else {
                 // Otherwise, select the previous step.
                 pager.currentItem = pager.currentItem - 1
-                this@BookDetailFragment.findNavController().navigateUp()
+                this@BookDetailFragmentGata.findNavController().navigateUp()
             }
         }
 
     }
 
 
-    private inner class ScreenSlidePagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
+    private inner class ScreenSlidePagerAdapterGata(fa: FragmentActivity) :
+        FragmentStateAdapter(fa) {
         override fun getItemCount(): Int =
-            viewModel.navigateToDetailEvent.value?.peekContent()?.listOfContentPerPage?.size ?: 1
+            viewModelGata.navigateToDetailEvent.value?.peekContent()?.listOfContentPerPage?.size
+                ?: 1
 
         override fun createFragment(position: Int): Fragment {
             val content =
-                viewModel.navigateToDetailEvent.value?.peekContent()?.listOfContentPerPage?.get(
+                viewModelGata.navigateToDetailEvent.value?.peekContent()?.listOfContentPerPage?.get(
                     position
                 ) ?: ""
             return when (position) {
-                0 -> ScreenSlideFirstPageFragment.newInstance(content)
+                0 -> ScreenSlideFirstPageFragmentGata.newInstance(content)
                 else -> ScreenSlidePageFragment.newInstance(
                     position,
                     content

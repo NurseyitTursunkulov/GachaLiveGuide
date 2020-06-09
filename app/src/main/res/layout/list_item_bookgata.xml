@@ -9,11 +9,11 @@
 
         <variable
             name="task"
-            type="com.example.gatchalive.bookList.Book" />
+            type="com.example.gatchalive.bookList.Gata" />
 
         <variable
             name="viewmodel"
-            type="com.example.gatchalive.MainViewModel" />
+            type="com.example.gatchalive.MainViewModelGata" />
     </data>
 
     <LinearLayout
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:foreground="@drawable/book_selector"
-            android:onClick="@{() -> viewmodel.openBook(task)}"
+            android:onClick="@{() -> viewmodel.openBookGata(task)}"
             app:cardCornerRadius="8dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout

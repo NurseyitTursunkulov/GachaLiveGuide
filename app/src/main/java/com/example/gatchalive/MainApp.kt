@@ -39,7 +39,7 @@ class MainApp : Application() {
 
     private val appModules: Module = module {
         viewModel {
-            MainViewModel(this@MainApp)
+            MainViewModelGata(this@MainApp)
         }
     }
 }

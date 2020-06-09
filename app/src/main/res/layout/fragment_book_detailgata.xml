@@ -12,7 +12,7 @@
 
         <variable
             name="bookInfo"
-            type="com.example.gatchalive.bookList.Book" />
+            type="com.example.gatchalive.bookList.Gata" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

@@ -7,34 +7,34 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.gatchalive.util.EventObserver
-import com.example.gatchalive.util.divideTextToParts
-import com.example.gatchalive.util.initAdvert
+import com.example.gatchalive.util.divideTextToPartsGata
+import com.example.gatchalive.util.initAdvertGata
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class SplashFragment : Fragment(R.layout.splash_fragment) {
+class SplashFragmentGata : Fragment(R.layout.splash_fragmentgata) {
 
-    private val viewModel: MainViewModel by sharedViewModel()
+    private val viewModelGata: MainViewModelGata by sharedViewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.adView = initAdvert(requireContext())
-        val content = viewModel.items.value
+        viewModelGata.adView = initAdvertGata(requireContext())
+        val content = viewModelGata.items.value
         content?.let { bookList ->
-            divideTextToParts(bookList)
+            divideTextToPartsGata(bookList)
         }
 
-        viewModel.splashState.observe(viewLifecycleOwner,
+        viewModelGata.splashStateGata.observe(viewLifecycleOwner,
             EventObserver {
                 when (it) {
-                    is SplashState.MainActivity -> {
+                    is SplashStateGata.MainActivityGata -> {
                         findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
                     }
                 }
             })
-        viewModel.showAdvertEvent.observe(viewLifecycleOwner, EventObserver {
-            if (viewModel.interstitialAd.isLoaded) {
-                viewModel.interstitialAd.show()
+        viewModelGata.showAdvertEvent.observe(viewLifecycleOwner, EventObserver {
+            if (viewModelGata.interstitialAd.isLoaded) {
+                viewModelGata.interstitialAd.show()
             } else {
                 Log.d("Nurs", "splash The interstitial wasn't loaded yet.")
             }

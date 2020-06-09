@@ -10,14 +10,14 @@
 
         <variable
             name="viewmodel"
-            type="com.example.gatchalive.MainViewModel" />
+            type="com.example.gatchalive.MainViewModelGata" />
 
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".bookList.MainFragment">
+        tools:context=".bookList.MainFragmentGata">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -53,7 +53,7 @@
 
             android:visibility="visible"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:listitem="@layout/list_item_book" />
+            tools:listitem="@layout/list_item_bookgata" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

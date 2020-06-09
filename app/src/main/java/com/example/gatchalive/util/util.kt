@@ -5,28 +5,28 @@ import android.content.Context
 import android.view.ViewTreeObserver
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
-import com.example.gatchalive.MainViewModel
-import com.example.gatchalive.SplashFragment
-import com.example.gatchalive.bookList.Book
+import com.example.gatchalive.MainViewModelGata
+import com.example.gatchalive.SplashFragmentGata
+import com.example.gatchalive.bookList.Gata
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
-import kotlinx.android.synthetic.main.splash_fragment.*
+import kotlinx.android.synthetic.main.splash_fragmentgata.*
 import java.util.*
 
-fun Fragment.removeFullScreen() {
+fun Fragment.removeFullScreenGata() {
     requireActivity().window.apply {
         addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN)
         clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
     }
 }
 
-fun MainViewModel.getString(int: Int): String {
+fun MainViewModelGata.getStringGata(int: Int): String {
     return getApplication<Application>().resources.getString(int)
 }
 
-fun SplashFragment.divideTextToParts(bookList: List<Book>) {
+fun SplashFragmentGata.divideTextToPartsGata(gataList: List<Gata>) {
     content_tv_for_count.viewTreeObserver.addOnPreDrawListener(object :
         ViewTreeObserver.OnPreDrawListener {
         override fun onPreDraw(): Boolean {
@@ -40,7 +40,7 @@ fun SplashFragment.divideTextToParts(bookList: List<Book>) {
             val end = content_tv_for_count.layout.getLineEnd(maxLinesVisible - 1)
 
             val content = content_tv_for_count.text.toString().substring(start, end)
-            bookList.forEach { book ->
+            gataList.forEach { book ->
                 book.listOfContentPerPage = book.body.chunked(content.length)
             }
             return true
@@ -49,7 +49,7 @@ fun SplashFragment.divideTextToParts(bookList: List<Book>) {
     )
 }
 
-fun initAdds(context: Context) {
+fun initAddsGata(context: Context) {
     MobileAds.initialize(context) {}
     MobileAds.setRequestConfiguration(
         RequestConfiguration.Builder()
@@ -58,7 +58,7 @@ fun initAdds(context: Context) {
     )
 }
 
-fun initAdvert(context: Context): AdView {
+fun initAdvertGata(context: Context): AdView {
     val adView = AdView(context)
     adView.adSize = AdSize.LARGE_BANNER
     adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
